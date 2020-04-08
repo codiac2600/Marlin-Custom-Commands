@@ -1,0 +1,7 @@
+
+#define USER_DESC_x "Nozzle Change"
+#define USER_GCODE_x "G28\nG1 X125 Y105 Z140 F2000\nM104 S275\nM117 Setting Nozzle to 275C\nG4 s10\nM0 Click when Finished\nM104 S0"
+
+
+Printer will home, proceed to middle of bed and Z140, heat nozzle to 275 and wait for user to finish. Once you click the encoder the heating will turn off.
+Note that the area I am homing to is based on a bed sized 250mm x 210mm. If your printer differes feel free to change these values.

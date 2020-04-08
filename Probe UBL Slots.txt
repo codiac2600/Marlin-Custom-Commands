@@ -1,0 +1,16 @@
+
+#define USER_DESC_x "Probe UBL Slot 1" //Use probe to setup UBL.
+#define USER_GCODE_x "G28\nG1 X0.00 Y0.00 F3000\nM190 S65\nG29 P1\nG29 P3\nG29 S1\nG29 A\nG29 F 10.0\nM500\nM140 S0\nM0 Mesh Saved in Slot 1"
+
+#define USER_DESC_x "UBL Offset Step 2"
+#define USER_GCODE_x "G28\nG1 X125 Y105 Z0.00\nM211 S0\nM0 Set Z Offset"
+
+#define USER_DESC_x "UBL Offset Step 3"
+#define USER_GCODE_x "M211 S1\nM500"
+
+Using these 3 custom commands you can create a proper UBL mesh, set fade height to 10mm, populate any missing probe points that cannot be reached
+Set the offset, and finish storing all the data to eeprom. Note that you cna make as many slots as you like just change the nG29 S1 to other values when 
+you create new commands for example:
+
+#define USER_DESC_x "Probe UBL Slot 2" //Use probe to setup UBL.
+#define USER_GCODE_x "G28\nG1 X0.00 Y0.00 F3000\nM190 S65\nG29 P1\nG29 P3\nG29 S2\nG29 A\nG29 F 10.0\nM500\nM140 S0\nM0 Mesh Saved in Slot 1"

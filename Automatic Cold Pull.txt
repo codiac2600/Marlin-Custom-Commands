@@ -1,0 +1,4 @@
+#define USER_DESC_x "Auto Cold Pull"
+#define USER_GCODE_x "G28\nM83\nG92 E0.00\nG21\nG1 X125 Y105 Z30\nM109 S250\nG1 E10.00 F6.5\nM109 S95\nM18 E\nM0 Pull your filament out\nM106 S0\nM109 S0"
+
+Runs a cold pull system to help you with your cold pull.
